@@ -1,14 +1,16 @@
 <?php
-require('../Library/Functions/Core.php');
-require('../Library/Functions/Utils.php');
-$feed = file_get_contents_curl('http://rubmonge.tumblr.com/rss');
-preg_match_all("/http\:\/\/[a-zA-Z0-9\-\.\:\_\/]+\.jpg/", $feed, $imgs, PREG_PATTERN_ORDER);
+//echo php_ini_loaded_file();
+//require('../Library/Functions/Core.php');
+//require('../Library/Functions/Utils.php');
+//$feed = file_get_contents_curl('http://rubmonge.tumblr.com/rss');
+//preg_match_all("/http\:\/\/[a-zA-Z0-9\-\.\:\_\/]+\.jpg/", $feed, $imgs, PREG_PATTERN_ORDER);
+$imgs=[];
 ?>
 <!doctype html>
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <title>rubmonge | rubenmonge.es</title>
+        <title>rubmonge | rubenmonge.com</title>
         <meta name="google-site-verification" content="BSFG3trxFMrwPqhQqk2o728i4DjK5cUmPtWUkSsWq7w" />
         <!-- Mobile Specific Metas -->		
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />        
@@ -274,7 +276,7 @@ preg_match_all("/http\:\/\/[a-zA-Z0-9\-\.\:\_\/]+\.jpg/", $feed, $imgs, PREG_PAT
                     </dl>
                 </div>
             </div>
-            <? if (is_array($imgs) && count($imgs[0])): ?>						
+            <? if (is_array($imgs) && count($imgs)): ?>						
             <aside class="margin-bottom bck dark">
                 <div class="row padding-top padding-bottom">
                     <div class="column_12">
